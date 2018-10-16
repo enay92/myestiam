@@ -23,7 +23,8 @@ const {navigate}= this.props.navigation
 
     if (Platform.OS == 'android')
 {
-    styles.head = {backgroundColor: '#032552',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
+    styles.head = {backgroundColor: '#005799',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
+    styles.foot = {backgroundColor: '#005799',}
 }
 
     return (
@@ -124,10 +125,10 @@ const {navigate}= this.props.navigation
 const styles = StyleSheet.create({
   head: {
 
-    backgroundColor: '#032552',
+    backgroundColor: '#005799',
   },
   foot: {
-    backgroundColor: '#032552',
+    backgroundColor: '#005799',
   },
   hello: {
     color: 'white',

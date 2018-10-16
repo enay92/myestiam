@@ -17,7 +17,7 @@ class Absence extends Component {
   render() {
     if (Platform.OS == 'android')
 {
-    styles.head = {backgroundColor: '#032552',paddingBottom:'15%', paddingTop:'5%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
+    styles.head = {backgroundColor: '#005799',paddingBottom:'15%', paddingTop:'5%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
 }
     const { navigate } = this.props.navigation
     return (
@@ -71,14 +71,14 @@ class Absence extends Component {
 export default Absence
 const styles = StyleSheet.create({
   head: {
-    backgroundColor: '#032552',
+    backgroundColor: '#005799',
     paddingBottom: '5%',
   },
   seg: {
-    backgroundColor: '#09396A',
+    backgroundColor: '#005799',
   },
   foot: {
-    backgroundColor: '#032552',
+    backgroundColor: '#005799',
   },
   body: {
     backgroundColor: '#f9f9fa',

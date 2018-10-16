@@ -16,20 +16,20 @@ const Getreminder = (IsVisible) => {
 
 let remind= {backgroundColor: '#DFAF2C', paddingBottom: '6%',  borderWidth:0}
 let remind2= {backgroundColor: '#DFAF2C', left: 10, height: 150, width: 60 }
-let headstyle = { backgroundColor: '#032552', paddingBottom: '17%', paddingTop: '6%' }
+let headstyle = { backgroundColor: '#005799', paddingBottom: '17%', paddingTop: '6%' }
 let profilname = { textAlign: 'right', color: 'white', }
 let picstyle = {}
-let profiltitlename = { textAlign: 'center' }
+let profiltitlename = { textAlign: 'center',  }
 
 if (Platform.OS == 'android') {
-    headstyle = { backgroundColor: '#032552', paddingBottom: '20%', paddingTop: '8%', flex: 1, flexDirection: 'row', justifyContent: 'space-between', }
+    headstyle = { backgroundColor: '#005799', paddingBottom: '20%', paddingTop: '8%', flex: 1, flexDirection: 'row', justifyContent: 'space-between', }
     profilname = { paddingLeft: '13%', textAlign: 'center' }
     profiltitlename = { textAlign: 'center' }
     picstyle = { paddingRight: '19%' }
-    remind2= {backgroundColor: '#DFAF2C', left: 10, height: 80, width: 60, top: 10, paddingLeft: 20,paddingBottom: 9}
+    remind2= {backgroundColor: '#DFAF2C', left: 10, height: 80, width: 60, top: 10, paddingLeft: 15,paddingBottom: 9}
 }
 if (Platform.OS == 'ios' || height == 812 || width == 812) {
-    headstyle = { backgroundColor: '#032552' }
+    headstyle = { backgroundColor: '#005799' }
     picstyle
     remind={backgroundColor: '#DFAF2C', paddingBottom: '6%',  borderWidth:0}
     remind2= {backgroundColor: '#DFAF2C', left: 10, height: 60, width: 50, top: 10,paddingLeft: 10, paddingBottom: 7}

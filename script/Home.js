@@ -169,11 +169,11 @@ class Home extends Component {
 const styles = StyleSheet.create({
 
   head: {
-    backgroundColor: '#032552'
+    backgroundColor: '#009EE3'
   },
 
   foot: {
-    backgroundColor: '#032552'
+    backgroundColor: '#009EE3'
   },
   body: {
     backgroundColor: '#878787'
