@@ -22,10 +22,6 @@ class Login extends React.Component {
         </View>
 
         <Text style={{ marginLeft: '25%', color: 'white' }}>Your studies companion. </Text>
-<<<<<<< HEAD
-        
-=======
->>>>>>> 8734224008f09216e5f37492b12d0afae0943de5
         <TouchableOpacity activeOpacity={.5} onPress={() => navigate('Home')}>
           <LinearGradient colors={['#01254E', '#041324']} start={{ x: 0, y: 0 }} end={{ x: 1.3, y: 0 }} style={styles.LinearGradientStyle} >
             <Text style={styles.text}> LOG IN</Text>

@@ -24,7 +24,7 @@ const {navigate}= this.props.navigation
     if (Platform.OS == 'android')
 {
     styles.head = {backgroundColor: '#005799',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
-    styles.foot = {backgroundColor: '#005799',}
+    
 }
 
     return (
@@ -100,8 +100,8 @@ const {navigate}= this.props.navigation
 
         />
 
-        <Footer style={styles.foot}>
-          <FooterTab>
+        <Footer >
+          <FooterTab style={styles.foot}>
             <Button>
               <Icon style={styles.hello} name="ios-home" onPress={() => navigate('Home')} />
             </Button>

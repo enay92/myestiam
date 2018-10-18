@@ -135,8 +135,8 @@ class Home extends Component {
           <Content style={styles.body}>
             {flux}
           </Content>
-          <Footer style={styles.foot}>
-            <FooterTab>
+          <Footer >
+            <FooterTab style={styles.foot}>
               <Button>
                 <Icon style={styles.hello} name="ios-home" onPress={() => navigate('Home')} />
               </Button>
@@ -169,11 +169,11 @@ class Home extends Component {
 const styles = StyleSheet.create({
 
   head: {
-    backgroundColor: '#009EE3'
+    backgroundColor: '#005799'
   },
 
   foot: {
-    backgroundColor: '#009EE3'
+    backgroundColor: '#005799'
   },
   body: {
     backgroundColor: '#878787'

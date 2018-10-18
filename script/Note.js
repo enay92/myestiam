@@ -94,8 +94,8 @@ export default class Note extends Component {
           {tab_note}
         </Content>
 
-        <Footer style={styles.foot}>
-          <FooterTab>
+        <Footer >
+          <FooterTab style={styles.foot}>
             <Button>
               <Icon style={styles.hello} name="ios-home" onPress={() => navigate('Home')} />
             </Button>
