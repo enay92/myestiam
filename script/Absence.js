@@ -75,7 +75,7 @@ class Absence extends Component {
         <Header hasTabs style={styles.head}>
           <StatusBar barStyle='light-content' />
           <Left >
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
+            <Button transparent onPress={() => navigate('Home')}>
               <Image style={styles.icon} source={require('./../image/fleche.png')} />
             </Button>
           </Left>
