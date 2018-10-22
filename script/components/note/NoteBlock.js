@@ -6,7 +6,7 @@ import { StyleSheet, View, } from 'react-native'
 const NoteBlock = ({ matter, average, lesson, lesson2, lesson3, mark, mark2, mark3, commentary }) => (
 
 
-    <Card styles={{backgroundColor: '#fc5e00'}}>
+    <Card styles={{backgroundColor: '#5A56A2'}}>
 
       <CardItem style={styles.titlefont}>
       <Left>
@@ -95,18 +95,19 @@ const styles = StyleSheet.create({
 
   },
   titlefont: {
-    backgroundColor: '#C6CECD'
+    backgroundColor: '#009B8F'
   },
   matter: {
     textAlign: 'left',
     fontSize: 18,
-    color: 'black'
+    color: 'white'
 
   },
   lesson: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
+   
   },
   mark: {
     paddingRight: 150,
@@ -154,7 +155,8 @@ const styles = StyleSheet.create({
   },
   average: {
     textAlign: 'right',
-    fontSize: 19
+    fontSize: 19,
+    color: 'white'
 
   }
 

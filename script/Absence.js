@@ -9,14 +9,14 @@ var BUTTONS = ["Chat", "Support", "Devoir", "Cours", "Quizz", "Mon Compte", "X"]
 
 const styles = StyleSheet.create({
   head: {
-    backgroundColor: '#005799',
+    backgroundColor: '#004080',
     paddingBottom: '5%',
   },
   seg: {
-    backgroundColor: '#005799',
+    backgroundColor: '#004080',
   },
   foot: {
-    backgroundColor: '#005799',
+    backgroundColor: '#004080',
   },
   body: {
     backgroundColor: '#f9f9fa',
@@ -57,16 +57,16 @@ class Absence extends Component {
   }
   render() {
     if (Platform.OS == 'android') {
-      styles.head = { backgroundColor: '#005799', paddingBottom: '15%', paddingTop: '5%', flex: 1, flexDirection: 'row', justifyContent: 'space-between', }
+      styles.head = { backgroundColor: '#004080', paddingBottom: '15%', paddingTop: '5%', flex: 1, flexDirection: 'row', justifyContent: 'space-between', }
     }
     const { navigate } = this.props.navigation;
 
-    const tabInjustheading = (<TabHeading style={{ backgroundColor: '#005799' }}>
+    const tabInjustheading = (<TabHeading style={{ backgroundColor: '#004080' }}>
       <Text style={{ color: '#FFF' }}>Injustifié</Text>
     </TabHeading>);
 
 
-    const tabJustheading = (<TabHeading style={{ backgroundColor: '#005799' }}>
+    const tabJustheading = (<TabHeading style={{ backgroundColor: '#004080' }}>
       <Text style={{ color: '#FFF' }}>Justifié</Text>
     </TabHeading>);
     return (
@@ -75,7 +75,7 @@ class Absence extends Component {
         <Header hasTabs style={styles.head}>
           <StatusBar barStyle='light-content' />
           <Left >
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
+            <Button transparent onPress={() => navigate('Home')}>
               <Image style={styles.icon} source={require('./../image/fleche.png')} />
             </Button>
           </Left>
@@ -84,7 +84,7 @@ class Absence extends Component {
           </Body>
           <Right />
         </Header>
-        <Tabs style={{ backgroundColor: '#005799' }}>
+        <Tabs style={{ backgroundColor: '#004080' }}>
           <Tab heading={tabInjustheading}>
             <Absence_injustify navigation={navigate}>
             </Absence_injustify>

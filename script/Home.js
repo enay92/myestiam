@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Image, StyleSheet, View, Text, } from 'react-native'
+import { Image, StyleSheet, View, Text,Platform } from 'react-native'
 import HomeBlock from './components/home/HomeBlock'
 import HomeHeaderBlock from './components/home/HomeHeaderBlock'
-import { Container, Content, Footer, FooterTab, Button, Icon, Thumbnail, ActionSheet, CardItem, Card} from 'native-base'
+import { Container, Content, Footer, FooterTab, Button, Icon, Thumbnail, ActionSheet, CardItem, Card, Header } from 'native-base'
 
 var BUTTONS = ["Chat", "Support", "Devoir", "Cours", "Quizz", "Mon Compte", "X"]
 
@@ -27,15 +27,15 @@ class Home extends Component {
   }
   render() {
 
-    
+
     const fluxs = [
       {
         logo: <Thumbnail source={require('./../image/siren.png')} />,
         name: "Absence",
         note: "Pensez à justifier vos absences",
         image: <Image source={require('./../image/run.gif')} style={{ height: 180, width: null, flex: 1 }} />,
-        note2: <Button block warning onPress={() => navigate('Absence')} style={{ marginRight: 40,  }}>
-          <Text style={{includeFontPadding : false, color: 'white'}}> JUSTIFIER </Text>
+        note2: <Button rounded warning onPress={() => navigate('Absence')} style={{ marginRight: 20, width: 100 }}>
+          <Text style={{ includeFontPadding: false, color: 'white', paddingLeft: '16%' }}>JUSTIFIER</Text>
         </Button>,
       },
       {
@@ -43,8 +43,8 @@ class Home extends Component {
         name: "Estiam News",
         note: "Les étudiants de Master 1 ont participé à un hackathon organisé en collaboration avec le Grand Paris Express",
         image: <Image source={require('./../image/hackathon.jpg')} style={{ height: 150, width: null, flex: 1 }} />,
-        note2: <Button block info onPress={() => navigate('Plus')} style={{ marginRight: 30,  }} >
-          <Text style={{includeFontPadding : false, color: 'white'}}>Savoir plus</Text>
+        note2: <Button rounded info onPress={() => navigate('Plus')} style={{ marginRight: 30, width: 100, }} >
+          <Text style={{ includeFontPadding: false, color: 'white', paddingLeft: '16%' }}>Savoir plus</Text>
         </Button>,
       },
       {
@@ -52,8 +52,8 @@ class Home extends Component {
         name: "Estiam News",
         note: "l'école au 52ème étage de la Tour Montparnasse !! ça fait haut quand même",
         image: <Image source={require('./../image/tour.jpeg')} style={{ height: 130, width: null, flex: 1 }} />,
-        note2: <Button block info onPress={() => navigate('Plus')} style={{ marginRight: 30, width: 100,  }}>
-          <Text style={{includeFontPadding : false, color: 'white'}}>Savoir plus</Text>
+        note2: <Button rounded info onPress={() => navigate('Plus')} style={{ marginRight: 30, width: 100, }}>
+          <Text style={{ includeFontPadding: false, color: 'white', paddingLeft: '16%' }}>Savoir plus</Text>
         </Button>,
       },
       {
@@ -61,8 +61,8 @@ class Home extends Component {
         name: "Estiam News",
         note: "Y'aurait-il des micros dans l'enceinte de l'école ?!",
         image: <Image source={require('./../image/bigbrother.png')} style={{ height: 150, width: null, flex: 1 }} />,
-        note2: <Button block info onPress={() => navigate('Plus')} style={{ marginRight: 30, width: 100,  }} >
-          <Text style={{includeFontPadding : false, color: 'white'}}>Savoir plus</Text>
+        note2: <Button rounded info onPress={() => navigate('Plus')} style={{ marginRight: 30, width: 100, }} >
+          <Text style={{ includeFontPadding: false, color: 'white', paddingLeft: '16%' }}>Savoir plus</Text>
         </Button>,
       },
     ]
@@ -74,7 +74,7 @@ class Home extends Component {
       i++
       return temp
     })
-    
+
 
     const profils = [
       {
@@ -101,7 +101,7 @@ class Home extends Component {
         connected: true,
         name: "Solene",
         pic: <Button transparent onPress={() => navigate('profil')}>
-        <Image source={require('./../image/icon.png')} /> </Button>,
+          <Image source={require('./../image/icon.png')} /> </Button>,
         title: "Assistante Magicienne de l'Estiam",
         reminder: <Image source={require('./../image/reminder.png')} />
       },
@@ -122,15 +122,15 @@ class Home extends Component {
       pic: '',
       connected: '',
       title: '',
-      lvl:'',
+      lvl: '',
 
     }
     const prf = profils[1];
-    const profil = <HomeHeaderBlock key={`prf_${r}`} name={prf.name} pic={prf.pic} connected={prf.connected} title={prf.title} lvl={prf.lvl} reminder={prf.reminder}/>
+    const profil = <HomeHeaderBlock key={`prf_${r}`} name={prf.name} pic={prf.pic} connected={prf.connected} title={prf.title} lvl={prf.lvl} reminder={prf.reminder} />
     const { navigate } = this.props.navigation
     if (!!this.state.fontLoaded) {
       return (
-        <Container style={{backgroundColor: '#DFAF2C'}}>
+        <Container style={{ backgroundColor: '#ffff' }}>
           {profil}
           <Content style={styles.body}>
             {flux}
@@ -143,8 +143,6 @@ class Home extends Component {
               <Button>
                 <Icon style={styles.hello} name="ios-paper" onPress={() => navigate('Note')} />
               </Button>
-              
-              
               <Button>
                 <Icon style={styles.hello} name="ios-time" onPress={() => navigate('Absence')} />
               </Button>
@@ -154,30 +152,33 @@ class Home extends Component {
             </FooterTab>
           </Footer>
         </Container>
-     
+
 
       )
     }
     else
       return (
-      <View> 
-        <Text title>Loading.....</Text> 
-      </View>
+        <View>
+          <Text title>Loading.....</Text>
+        </View>
       )
   }
 }
 const styles = StyleSheet.create({
-
+headstyle :{
+  backgroundColor: '#004080', paddingBottom: '17%', paddingTop: '6%' 
+},
   head: {
     backgroundColor: '#005799'
   },
 
   foot: {
-    backgroundColor: '#005799'
+    backgroundColor: '#004080'
   },
   body: {
-    backgroundColor: '#878787'
-  },
+    backgroundColor: '#5A56A2',
+    
+  }, 
   hello: {
     textAlign: 'center',
     color: 'white'
@@ -201,5 +202,10 @@ const styles = StyleSheet.create({
 
 
 })
+if (Platform.OS == 'ios') {
+  headstyle = { backgroundColor: "#004080" }
 
-export default Home
+}
+
+
+  export default Home

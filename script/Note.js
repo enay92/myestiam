@@ -62,8 +62,8 @@ export default class Note extends Component {
     ]
     if (Platform.OS == 'android')
 {
-    styles.head = {backgroundColor: '#005799',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
-    styles.foot = {backgroundColor:  '#005799',}
+    styles.head = {backgroundColor: '#004080',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
+    styles.foot = {backgroundColor:  '#004080',}
 }
     let i = 0
     const tab_note = notes.map(note => {
@@ -81,7 +81,7 @@ export default class Note extends Component {
           <StatusBar barStyle='light-content' />
 
           <Left >
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
+            <Button transparent onPress={() => navigate('Home')}>
               <Image style={styles.icon} source={require('./../image/fleche.png')} />
             </Button>
           </Left>
@@ -141,11 +141,11 @@ const styles = StyleSheet.create({
   },
 
   head: {
-    backgroundColor: '#005799',
+    backgroundColor: '#004080',
   },
 
   foot: {
-    backgroundColor: '#005799',
+    backgroundColor: '#004080',
   },
   body: {
     backgroundColor: '#878787',
