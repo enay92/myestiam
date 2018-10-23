@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import renderIf from './renderif'
+import PenseBete from './PenseBete'
 import { Image, StyleSheet, View, Text,Platform } from 'react-native'
 import HomeBlock from './components/home/HomeBlock'
 import HomeHeaderBlock from './components/home/HomeHeaderBlock'
@@ -6,14 +8,18 @@ import { Container, Content, Footer, FooterTab, Button, Icon, Thumbnail, ActionS
 
 var BUTTONS = ["Chat", "Support", "Devoir", "Cours", "Quizz", "Mon Compte", "X"]
 
+
 class Home extends Component {
+
+state ={
+    fontLoaded: false
+  }
+  
 
   static navigationOptions = {
     header: null
   }
-  state = {
-    fontLoaded: false
-  }
+
   async componentWillMount() {
     try {
       await Expo.Font.loadAsync({
