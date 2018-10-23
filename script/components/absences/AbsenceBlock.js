@@ -15,12 +15,10 @@ const AbsenceBlock = ({ date, name, justifie, lien }) => (
             </Left>
         </CardItem>
         <CardItem>
-            <Body>
-                <Content>
-                {lien}
-                </Content>
-            </Body>
-            <Right><Text title>{name}</Text></Right>
+                <Left>
+                    <Text note>{name}</Text>
+                </Left>
+            <Right>{lien}</Right>
         </CardItem>
     </Card>
    

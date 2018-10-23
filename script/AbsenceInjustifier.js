@@ -19,7 +19,7 @@ export default class Absence_injustify extends Component {
         justifie: false,
         name: "POO",
         date: "16 Fevrier",
-        lien: <Button warning onPress={() => navigate('Justification')}> 
+        lien: <Button  warning onPress={() => navigate('Justification')}> 
                 <Text> Justifier </Text>
                 <Icon name='warning' />
               </Button>,
@@ -30,7 +30,7 @@ export default class Absence_injustify extends Component {
         justifie: false,
         name: "SQL",
         date: "17 Fevrier",
-        lien: <Button warning>
+        lien: <Button  warning onPress={() => navigate('Justification')}>
                 <Text>Justifier</Text>
                 <Icon name='warning' />
               </Button>,
@@ -41,7 +41,7 @@ export default class Absence_injustify extends Component {
         justifie: false,
         name: "Anglais",
         date: "22 Avril",
-        lien: <Button warning>
+        lien: <Button  warning onPress={() => navigate('Justification')}>
                 <Text>Justifier</Text>
                 <Icon name='warning' />
               </Button>,
@@ -52,7 +52,8 @@ export default class Absence_injustify extends Component {
         justifie: false,
         name: "CCNA",
         date: "22 Avril",
-        lien: <Button warning><Text>Justifier</Text>
+        lien: <Button  warning onPress={() => navigate('Justification')}>
+        <Text>Justifier</Text>
           <Icon name='warning' />
         </Button>,
       },

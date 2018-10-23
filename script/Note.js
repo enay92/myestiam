@@ -90,7 +90,7 @@ export default class Note extends Component {
           </Body>
           <Right />
         </Header>
-        <Content>
+        <Content style={{backgroundColor:'#004E40'}}>
           {tab_note}
         </Content>
 

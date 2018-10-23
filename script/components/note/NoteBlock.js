@@ -24,7 +24,7 @@ const NoteBlock = ({ matter, average, lesson, lesson2, lesson3, mark, mark2, mar
       </CardItem>
 
 
-      <CardItem>
+      <CardItem style ={{backgroundColor:'#89CBC0'}}> 
 
         <Body style={styles.lesson}>
           <Content style={styles.trait}>
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
-   
+   backgroundColor: '#89CBC0'
   },
   mark: {
     paddingRight: 150,
