@@ -23,6 +23,7 @@
     "@expo/vector-icons": "^6.3.1",
     "accordion-collapse-react-native": "^0.1.6",
     "expo": "^27.0.1",
+    "git": "^0.1.5",
     "native-base": "^2.7.1",
     "react": "16.3.1",
     "react-apollo": "^2.1.11",

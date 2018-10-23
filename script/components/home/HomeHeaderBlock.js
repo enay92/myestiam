@@ -11,6 +11,7 @@ if (Platform.OS == 'ios') {
     remind2 = { backgroundColor: '#EE7113', left: 10, height: 150, width: 60 }
     profilname = { textAlign: 'right', color: '#8AD2FA', color:'white' }
     profiltitlename = { textAlign: 'center',color: '#8AD2FA' }
+    picstyle ={}
 
 }
 if (Platform.OS == 'android') {
@@ -25,8 +26,9 @@ if (Platform.OS == 'android') {
 if (Platform.OS == 'ios' || height == 812 || width == 812) {
 
     profilname = { textAlign: 'right', color: 'white' }
+    picstyle ={}
     headstyle = { backgroundColor: '#004080' }
-    profiltitlename={color: '#8AD2FA'}
+    profiltitlename={color: '#8AD2FA', textAlign: 'center'}
     remind = { backgroundColor: '#EE7113', paddingBottom: '6%', borderWidth: 0 }
     remind2 = { backgroundColor: '#EE7113', left: 10, height: 60, width: 50, top: 10, paddingLeft: 10, paddingBottom: 7 }
 }

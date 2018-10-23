@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
     },
 
     head: {
-        backgroundColor: '#009EE3',
+        backgroundColor: '#004080',
     },
     
     picker: {
