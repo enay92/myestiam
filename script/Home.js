@@ -143,17 +143,19 @@ state ={
           </Content>
           <Footer >
             <FooterTab style={styles.foot}>
-              <Button>
-                <Icon style={styles.hello} name="ios-home" onPress={() => navigate('Home')} />
+              <Button onPress={() => navigate('Home')}>
+                <Icon style={styles.hello} name="ios-home"  />
               </Button>
-              <Button>
-                <Icon style={styles.hello} name="ios-paper" onPress={() => navigate('Note')} />
+              <Button onPress={() => navigate('Note')}>
+                <Icon style={styles.hello} name="ios-paper"  />
               </Button>
-              <Button>
-                <Icon style={styles.hello} name="ios-time" onPress={() => navigate('Absence')} />
+              
+              
+              <Button onPress={() => navigate('Absence')}>
+                <Icon style={styles.hello} name="ios-time"  />
               </Button>
-              <Button>
-                <Icon style={styles.hello} name="ios-calendar" onPress={() => navigate('Planning')} />
+              <Button onPress={() => navigate('Planning')}>
+                <Icon style={styles.hello} name="ios-calendar"  />
               </Button>
             </FooterTab>
           </Footer>
