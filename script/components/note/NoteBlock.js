@@ -24,7 +24,7 @@ export default class NoteBlock extends React.Component {
 
     return (
 
-      <Card styles={{backgroundColor: '#5A56A2'}}>    
+      <Card styles={{backgroundColor: '#C0C4C4'}}>    
       <CardItem style={fond2}>
       <Left>
         <Body style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}> 

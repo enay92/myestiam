@@ -77,8 +77,8 @@ export default class Note extends Component {
     ]
     if (Platform.OS == 'android')
 {
-    styles.head = {backgroundColor: '#004080',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
-    styles.foot = {backgroundColor:  '#004080',}
+    styles.head = {backgroundColor: '#004E40',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
+    styles.foot = {backgroundColor:  '#004E40',}
 }
     let i = 0
     const tab_note = notes.map(note => {
@@ -105,7 +105,7 @@ export default class Note extends Component {
           </Body>
           <Right />
         </Header>
-        <Content style={{backgroundColor:'#5A56A2'}}>
+        <Content style={{backgroundColor:'#C0C4C4'}}>
           {tab_note}
         </Content>
 
@@ -156,11 +156,11 @@ const styles = StyleSheet.create({
   },
 
   head: {
-    backgroundColor: '#004080',
+    backgroundColor: '#004E40',
   },
 
   foot: {
-    backgroundColor: '#004080',
+    backgroundColor: '#004E40',
   },
   body: {
     backgroundColor: '#878787',

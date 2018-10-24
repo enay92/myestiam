@@ -19,9 +19,9 @@ export default class Absence_injustify extends Component {
         justifie: false,
         name: "POO",
         date: "16 Fevrier",
-        lien: <Button  warning onPress={() => navigate('Justification')}> 
-                <Text> Justifier </Text>
-                <Icon name='warning' />
+        lien: <Button  style={{backgroundColor:'#EE7113'}} onPress={() => navigate('Justification')}> 
+                <Text style ={{color:'#FBBB1D'}}>Justifier</Text>
+                <Icon name='warning' style={{color:'#FBBB1D'}} />
               </Button>,
       },
       {
@@ -30,10 +30,10 @@ export default class Absence_injustify extends Component {
         justifie: false,
         name: "SQL",
         date: "17 Fevrier",
-        lien: <Button  warning onPress={() => navigate('Justification')}>
-                <Text>Justifier</Text>
-                <Icon name='warning' />
-              </Button>,
+        lien: <Button  style={{backgroundColor:'#EE7113'}} onPress={() => navigate('Justification')}> 
+        <Text style ={{color:'#FBBB1D'}}>Justifier</Text>
+        <Icon name='warning' style={{color:'#FBBB1D'}} />
+      </Button>,
       },
       {
         key: "1496",
@@ -41,10 +41,10 @@ export default class Absence_injustify extends Component {
         justifie: false,
         name: "Anglais",
         date: "22 Avril",
-        lien: <Button  warning onPress={() => navigate('Justification')}>
-                <Text>Justifier</Text>
-                <Icon name='warning' />
-              </Button>,
+        lien: <Button  style={{backgroundColor:'#EE7113'}} onPress={() => navigate('Justification')}> 
+        <Text style ={{color:'#FBBB1D'}}>Justifier</Text>
+        <Icon name='warning' style={{color:'#FBBB1D'}} />
+      </Button>,
       },
       {
         key: "4538",
@@ -52,10 +52,10 @@ export default class Absence_injustify extends Component {
         justifie: false,
         name: "CCNA",
         date: "22 Avril",
-        lien: <Button  warning onPress={() => navigate('Justification')}>
-        <Text>Justifier</Text>
-          <Icon name='warning' />
-        </Button>,
+        lien: <Button  style={{backgroundColor:'#EE7113'}} onPress={() => navigate('Justification')}> 
+        <Text style ={{color:'#FBBB1D'}}>Justifier</Text>
+        <Icon name='warning' style={{color:'#FBBB1D'}} />
+      </Button>,
       },
     ]
     let i = 0
@@ -70,7 +70,7 @@ export default class Absence_injustify extends Component {
 
     return (
     
-      <Container>
+      <Container style={{backgroundColor:'#C0C4C4'}}>
         <Content>
           {absences}
         </Content>

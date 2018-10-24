@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Alert, Text, TextInput, StyleSheet, StatusBar, Picker, View, Image, TouchableOpacity } from 'react-native'
+import { Alert, Text, TextInput, StyleSheet, StatusBar, ScrollView, View, Image, Platform } from 'react-native'
 import { Container, Header, Title, Content, Accordion, Footer, FooterTab, Button, Left, Right, Body, Icon, ActionSheet, Textarea, DatePicker, Input } from 'native-base'
 import { AppLoading, DocumentPicker, ImagePicker } from 'expo'
 import RNPickerSelect from 'react-native-picker-select'
@@ -103,13 +103,16 @@ class Justification extends Component {
 
 
     render() {
+        if (Platform.OS == 'android') {
+            styles.head = { backgroundColor: '#EE7113', paddingBottom: '20%', paddingTop: '5%', flex: 1, flexDirection: 'row', justifyContent: 'space-between', }
+          }
         const { navigate } = this.props.navigation
         if (!this.state.fontLoaded) {
-            return <AppLoading />
+            return <AppLoading/>
         }
         let { image } = this.state
         return (
-           
+
             <Container>
                 <Header style={styles.head}>
                     <StatusBar barStyle='light-content' />
@@ -131,7 +134,7 @@ class Justification extends Component {
 
                 </Header>
 
-                <View style={styles.container}>
+                <ScrollView style={styles.container}>
 
 
                     <View style={{ paddingVertical: '5%', paddingBottom: '2%' }} />
@@ -222,32 +225,38 @@ class Justification extends Component {
                         }}
                     />
 
-                </View>
-               
-                    <Button
-                        title="Select Document"
-                        onPress={this._pickDocument}
-                    />
+                </ScrollView>
 
-                    
-                        <Button
-                            title="Select Image"
-                            onPress={this._pickImage}
-                        />
-                        {image &&
-                            <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
-                            <Button first active style ={styles.bouton} > <Text> Envoyer </Text> </Button> 
+                <Button
+                    title="Select Document"
+                    onPress={this._pickDocument}
+                />
+
+
+                <Button
+                    title="Select Image"
+                    onPress={this._pickImage}
+                />
+                {image &&
+                    <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
+
+                <Button block style ={{backgroundColor:'#EE7113'}}>
+                    <Text>
+                        Envoyer
+                    </Text>
+                </Button>
+
             </Container>
-          
+
         )
     }
 }
 
 const styles = StyleSheet.create({
 
-  bouton :{
-    alignItems: 'center',
-  },
+    bouton: {
+        alignItems: 'center',
+    },
 
     container: {
         paddingTop: 30,
@@ -261,14 +270,14 @@ const styles = StyleSheet.create({
     },
 
     head: {
-        backgroundColor: '#009EE3',
+        backgroundColor: '#EE7113',
     },
-    
+
     picker: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-      },
+    },
 })
 
 const pickerSelectStyles = StyleSheet.create({

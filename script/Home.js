@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import renderIf from './renderif'
-import PenseBete from './PenseBete'
+import Load from './Load'
 import { Image, StyleSheet, View, Text,Platform } from 'react-native'
 import HomeBlock from './components/home/HomeBlock'
 import HomeHeaderBlock from './components/home/HomeHeaderBlock'
@@ -22,6 +22,7 @@ state ={
 
   async componentWillMount() {
     try {
+      
       await Expo.Font.loadAsync({
         'Roboto': require('./../node_modules/native-base/Fonts/Roboto.ttf'),
         'Roboto_medium': require('./../node_modules/native-base/Fonts/Roboto_medium.ttf'),
@@ -45,7 +46,7 @@ state ={
         </Button>,
       },
       {
-        logo: <Thumbnail source={{ require: './../image/ring-bell.png' }} />,
+        logo: <Thumbnail source={require('./../image/ring-bell.png') } />,
         name: "Estiam News",
         note: "Les étudiants de Master 1 ont participé à un hackathon organisé en collaboration avec le Grand Paris Express",
         image: <Image source={require('./../image/hackathon.jpg')} style={{ height: 150, width: null, flex: 1 }} />,
@@ -54,7 +55,7 @@ state ={
         </Button>,
       },
       {
-        logo: <Thumbnail source={{ require: './../image/ring-bell.png' }} />,
+        logo: <Thumbnail source={ require('./../image/ring-bell.png') } />,
         name: "Estiam News",
         note: "l'école au 52ème étage de la Tour Montparnasse !! ça fait haut quand même",
         image: <Image source={require('./../image/tour.jpeg')} style={{ height: 130, width: null, flex: 1 }} />,
@@ -63,7 +64,7 @@ state ={
         </Button>,
       },
       {
-        logo: <Thumbnail source={{ require: './../image/ring-bell.png' }} />,
+        logo: <Thumbnail source={ require( './../image/ring-bell.png') }/>,
         name: "Estiam News",
         note: "Y'aurait-il des micros dans l'enceinte de l'école ?!",
         image: <Image source={require('./../image/bigbrother.png')} style={{ height: 150, width: null, flex: 1 }} />,
@@ -167,7 +168,7 @@ state ={
     else
       return (
         <View>
-          <Text title>Loading.....</Text>
+        <Load/>
         </View>
       )
   }
@@ -184,7 +185,7 @@ headstyle :{
     backgroundColor: '#004080'
   },
   body: {
-    backgroundColor: '#5A56A2',
+    backgroundColor: '#C0C4C4',
     
   }, 
   hello: {

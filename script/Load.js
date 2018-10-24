@@ -7,20 +7,6 @@ class Load extends React.Component {
   static navigationOptions = {
     header: null
   }
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      loaded: false,
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ loaded: true })
-    const { navigate } = this.props.navigation
-    navigate('Login')
-  }
-
   render() {
 
 

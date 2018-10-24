@@ -12,8 +12,8 @@ const HomeBlock = ({ logo, name, note, image, note2 }) => (
       <Left>
         {logo}
         <Body>
-          <Text style={{color:'#004080'}}>{name}</Text>
-          <Text note style={{color:'#009B8F'}}>{note}</Text>
+          <Text style={{color:'black'}}>{name}</Text>
+          <Text note style={{color:'#0099E6'}}>{note}</Text>
         </Body>
       </Left>
     </CardItem>
