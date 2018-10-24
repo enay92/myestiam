@@ -7,20 +7,20 @@ import { Body, Text, Title, Image, Content, Container, Header, Left, Right, Butt
 
 if (Platform.OS == 'ios') {
     headstyle = { backgroundColor: "#004080", paddingTop: '90px', paddingBottom: '90px' }
-    remind ={ backgroundColor: '#EE7113', paddingBottom: '6%', borderWidth: 0 }
-    remind2 = { backgroundColor: '#EE7113', left: 10, height: 150, width: 60 }
+    remind ={ backgroundColor: '#E84039', paddingBottom: '6%', borderWidth: 0 }
+    remind2 = { backgroundColor: '#E84039', left: 10, height: 150, width: 60 }
     profilname = { textAlign: 'right', color: '#8AD2FA', color:'white' }
     profiltitlename = { textAlign: 'center',color: '#8AD2FA' }
     picstyle ={}
 
 }
 if (Platform.OS == 'android') {
-    remind ={ backgroundColor: '#EE7113', paddingBottom: '6%', borderWidth: 0 }
+    remind ={ backgroundColor: '#E84039', paddingBottom: '6%', borderWidth: 0 }
     headstyle = { backgroundColor: '#004080', paddingBottom: '20%', paddingTop: '8%', flex: 1, flexDirection: 'row', justifyContent: 'space-between', }
     profilname = { paddingLeft: '13%', textAlign: 'center', color:'white' }
     profiltitlename = { textAlign: 'center', color: '#8AD2FA' }
     picstyle = { paddingRight: '19%' }
-    remind2 = { backgroundColor: '#EE7113', left: 10, height: 80, width: 60, top: 10, paddingLeft: 15, paddingBottom: 9 }
+    remind2 = { backgroundColor: '#E84039', left: 10, height: 80, width: 60, top: 10, paddingLeft: 15, paddingBottom: 9 }
 
 }
 if (Platform.OS == 'ios' || height == 812 || width == 812) {
@@ -28,9 +28,9 @@ if (Platform.OS == 'ios' || height == 812 || width == 812) {
     profilname = { textAlign: 'right', color: 'white' }
     picstyle ={}
     headstyle = { backgroundColor: '#004080' }
-    profiltitlename={color: '#8AD2FA', textAlign: 'center'}
-    remind = { backgroundColor: '#EE7113', paddingBottom: '6%', borderWidth: 0 }
-    remind2 = { backgroundColor: '#EE7113', left: 10, height: 60, width: 50, top: 10, paddingLeft: 10, paddingBottom: 7 }
+    profiltitlename={color: '#8AD2FA'}
+    remind = { backgroundColor: '#E84039', paddingBottom: '6%', borderWidth: 0 }
+    remind2 = { backgroundColor: '#E84039', left: 10, height: 60, width: 50, top: 10, paddingLeft: 10, paddingBottom: 7 }
 }
 
 export default class HomeHeaderBlock extends React.Component {
@@ -72,7 +72,7 @@ export default class HomeHeaderBlock extends React.Component {
 {renderIf(this.state.status)(
 <Content style={remind}>
 
-                <Text style ={{textAlign: 'center', color: 'black'}}>
+                <Text style ={{textAlign: 'center', color: '#FFEE00'}}>
                     Cours de SQL en salle B5
                 </Text>
 

@@ -9,14 +9,14 @@ var BUTTONS = ["Chat", "Support", "Devoir", "Cours", "Quizz", "Mon Compte", "X"]
 
 const styles = StyleSheet.create({
   head: {
-    backgroundColor: '#004080',
+    backgroundColor: '#EE7113',
     paddingBottom: '5%',
   },
   seg: {
     backgroundColor: '#004080',
   },
   foot: {
-    backgroundColor: '#004080',
+    backgroundColor: '#EE7113',
   },
   body: {
     backgroundColor: '#f9f9fa',
@@ -57,16 +57,16 @@ class Absence extends Component {
   }
   render() {
     if (Platform.OS == 'android') {
-      styles.head = { backgroundColor: '#004080', paddingBottom: '15%', paddingTop: '5%', flex: 1, flexDirection: 'row', justifyContent: 'space-between', }
+      styles.head = { backgroundColor: '#EE7113', paddingBottom: '15%', paddingTop: '5%', flex: 1, flexDirection: 'row', justifyContent: 'space-between', }
     }
     const { navigate } = this.props.navigation;
 
-    const tabInjustheading = (<TabHeading style={{ backgroundColor: '#004080' }}>
+    const tabInjustheading = (<TabHeading style={{ backgroundColor: '#EE7113' }}>
       <Text style={{ color: '#FFF' }}>Injustifié</Text>
     </TabHeading>);
 
 
-    const tabJustheading = (<TabHeading style={{ backgroundColor: '#004080' }}>
+    const tabJustheading = (<TabHeading style={{ backgroundColor: '#EE7113' }}>
       <Text style={{ color: '#FFF' }}>Justifié</Text>
     </TabHeading>);
     return (

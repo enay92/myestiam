@@ -65,7 +65,7 @@ export default class Absence_justify extends Component {
 
     return (
    
-      <Container>
+      <Container style={{backgroundColor:'#C0C4C4'}}>
         <Content>
           {absences}
         </Content>

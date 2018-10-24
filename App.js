@@ -21,6 +21,18 @@ export default class App extends React.Component {
   };
   async componentWillMount() {
     try {
+      await Expo.Asset.loadAsync([
+        require('./image/siren.png'),
+        require('./image/run.gif'),
+        require('./image/hackathon.jpg'),
+        require('./image/ring-bell.png'),
+        require('./image/tour.jpeg'),
+        require('./image/bigbrother.png'),
+        require('./image/icon.png'),
+        require('./image/reminder.png')
+
+  
+        ])
       await Expo.Font.loadAsync({
         'Roboto': require('./node_modules/native-base/Fonts/Roboto.ttf'),
         'Roboto_medium': require('./node_modules/native-base/Fonts/Roboto_medium.ttf'),
@@ -41,6 +53,7 @@ export default class App extends React.Component {
     else
       return (
         <View>
+          <Load/>
         </View>
       );
   }

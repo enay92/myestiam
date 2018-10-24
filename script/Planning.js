@@ -23,7 +23,7 @@ const {navigate}= this.props.navigation
 
     if (Platform.OS == 'android')
 {
-    styles.head = {backgroundColor: '#004080',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
+    styles.head = {backgroundColor: '#837518',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
     
 }
 
@@ -92,7 +92,7 @@ const {navigate}= this.props.navigation
           refreshControl={null}
 
           markedDates={{
-            '2018-08-16': { selected: true, marked: true, selectedColor: 'blue' },
+            '2018-08-16': { selected: true, marked: true, selectedColor: '#837518' },
             '2018-08-17': { marked: true },
             '2018-08-18': { marked: true, dotColor: 'red', activeOpacity: 0 },
             '2018-08-19': { disabled: true, disableTouchEvent: true }
@@ -125,10 +125,10 @@ const {navigate}= this.props.navigation
 const styles = StyleSheet.create({
   head: {
 
-    backgroundColor: '#004080',
+    backgroundColor: '#837518',
   },
   foot: {
-    backgroundColor: '#004080',
+    backgroundColor: '#837518',
   },
   hello: {
     color: 'white',

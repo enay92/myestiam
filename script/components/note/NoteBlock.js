@@ -3,12 +3,29 @@ import React from 'react'
 import { Left, Right, Body, Text, Icon, Card, CardItem, Content } from 'native-base'
 import { StyleSheet, View, } from 'react-native'
 
-const NoteBlock = ({ matter, average, lesson, lesson2, lesson3, mark, mark2, mark3, commentary }) => (
+
+export default class NoteBlock extends React.Component {
+  render () {
+    var {matter, average, lesson, lesson2, lesson3, mark, mark2, mark3, validate} = this.props;
+
+    let fond={backgroundColor: '#89CBC0'}
+    let fond2={backgroundColor: '#009B8F'}
+
+    if (!validate){
+      fond = {backgroundColor: '#F39B9A'}
+      fond2 = {backgroundColor: '#E84039'} 
+    }
+    else {
+      fond = {backgroundColor: '#89CBC0'}
+      fond2 = {backgroundColor: '#009B8F'}
+    }
 
 
-    <Card styles={{backgroundColor: '#5A56A2'}}>
 
-      <CardItem style={styles.titlefont}>
+    return (
+
+      <Card styles={{backgroundColor: '#C0C4C4'}}>    
+      <CardItem style={fond2}>
       <Left>
         <Body style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}> 
           <Content>
@@ -22,10 +39,7 @@ const NoteBlock = ({ matter, average, lesson, lesson2, lesson3, mark, mark2, mar
         </Body>
         </Left>
       </CardItem>
-
-
-      <CardItem style ={{backgroundColor:'#89CBC0'}}> 
-
+      <CardItem style ={fond}> 
         <Body style={styles.lesson}>
           <Content style={styles.trait}>
             <Text />
@@ -49,7 +63,6 @@ const NoteBlock = ({ matter, average, lesson, lesson2, lesson3, mark, mark2, mar
             <Text />
           </Content>
         </Body>
-
         <Right>
           <Content style={styles.trait}>
             <Text />
@@ -73,17 +86,11 @@ const NoteBlock = ({ matter, average, lesson, lesson2, lesson3, mark, mark2, mar
             <Text />
           </Content>
         </Right>
-
       </CardItem>
-
-
     </Card>
-
- 
-
-)
-
-export default NoteBlock
+    )
+  }
+}
 
 const styles = StyleSheet.create({
 
@@ -93,9 +100,6 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     margin: 5,
 
-  },
-  titlefont: {
-    backgroundColor: '#009B8F'
   },
   matter: {
     textAlign: 'left',
@@ -107,8 +111,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
-   backgroundColor: '#89CBC0'
+ 
   },
+
+
   mark: {
     paddingRight: 150,
     width: 200,
@@ -159,6 +165,5 @@ const styles = StyleSheet.create({
     color: 'white'
 
   }
-
 
 })

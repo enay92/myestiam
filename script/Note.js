@@ -22,7 +22,9 @@ export default class Note extends Component {
         lesson2: 'Algorithmes',
         mark2: '17',
         lesson3: 'Final',
-        mark3: '14'
+        mark3: '14',
+        validate: true
+        
 
       },
       {
@@ -33,7 +35,8 @@ export default class Note extends Component {
         lesson2: 'Base de données',
         mark2: '17',
         lesson3: 'Final',
-        mark3: '14'
+        mark3: '14',
+        validate: true
 
       },
       {
@@ -44,7 +47,8 @@ export default class Note extends Component {
         lesson2: 'Utilisation de JavaScript',
         mark2: '16',
         lesson3: 'Application Web',
-        mark3: '19'
+        mark3: '19',
+        validate: true
 
       },
       {
@@ -55,20 +59,31 @@ export default class Note extends Component {
         lesson2: 'Oral',
         mark2: '16',
         lesson3: 'Anglais appliqué à l\'informatique',
-        mark3: '19'
+        mark3: '19',
+        validate: true
 
       },
-
+      {
+      matter: 'IOT',
+        average: '8',
+        lesson: 'Introduction',
+        mark: '8',
+        lesson2: 'Arduino',
+        mark2: '10',
+        lesson3: 'Projet Final',
+        mark3: '6',
+        validate: false
+      },
     ]
     if (Platform.OS == 'android')
 {
-    styles.head = {backgroundColor: '#004080',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
-    styles.foot = {backgroundColor:  '#004080',}
+    styles.head = {backgroundColor: '#004E40',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
+    styles.foot = {backgroundColor:  '#004E40',}
 }
     let i = 0
     const tab_note = notes.map(note => {
       const temp = (
-        <NoteBlock key={`abs_${i}`} mark={note.mark} mark2={note.mark2} mark3={note.mark3} matter={note.matter} average={note.average} lesson={note.lesson} lesson2={note.lesson2} lesson3={note.lesson3} />
+        <NoteBlock key={`abs_${i}`} mark={note.mark} mark2={note.mark2} mark3={note.mark3} matter={note.matter} average={note.average} lesson={note.lesson} lesson2={note.lesson2} lesson3={note.lesson3} validate={note.validate} />
       )
       i++
       return temp
@@ -90,7 +105,7 @@ export default class Note extends Component {
           </Body>
           <Right />
         </Header>
-        <Content style={{backgroundColor:'#004E40'}}>
+        <Content style={{backgroundColor:'#C0C4C4'}}>
           {tab_note}
         </Content>
 
@@ -141,11 +156,11 @@ const styles = StyleSheet.create({
   },
 
   head: {
-    backgroundColor: '#004080',
+    backgroundColor: '#004E40',
   },
 
   foot: {
-    backgroundColor: '#004080',
+    backgroundColor: '#004E40',
   },
   body: {
     backgroundColor: '#878787',
