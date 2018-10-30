@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Left, Right, Body, Text, Icon, Card, CardItem, Content } from 'native-base'
 import { StyleSheet, View, } from 'react-native'
 

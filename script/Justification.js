@@ -105,10 +105,10 @@ class Justification extends Component {
     render() {
         if (Platform.OS == 'android') {
             styles.head = { backgroundColor: '#EE7113', paddingBottom: '20%', paddingTop: '5%', flex: 1, flexDirection: 'row', justifyContent: 'space-between', }
-          }
+        }
         const { navigate } = this.props.navigation
         if (!this.state.fontLoaded) {
-            return <AppLoading/>
+            return <AppLoading />
         }
         let { image } = this.state
         return (
@@ -134,7 +134,7 @@ class Justification extends Component {
 
                 </Header>
 
-                <ScrollView style={styles.container}>
+                <Container style={styles.container}>
 
 
                     <View style={{ paddingVertical: '5%', paddingBottom: '2%' }} />
@@ -225,27 +225,27 @@ class Justification extends Component {
                         }}
                     />
 
-                </ScrollView>
-
-                <Button
-                    title="Select Document"
-                    onPress={this._pickDocument}
-                />
 
 
-                <Button
-                    title="Select Image"
-                    onPress={this._pickImage}
-                />
-                {image &&
-                    <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
+                    <Button
+                        title="Select Document"
+                        onPress={this._pickDocument}
+                    />
 
-                <Button block style ={{backgroundColor:'#EE7113'}}>
-                    <Text>
-                        Envoyer
+
+                    <Button
+                        title="Select Image"
+                        onPress={this._pickImage}
+                    />
+                    {image &&
+                        <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
+
+                    <Button block style={{ backgroundColor: '#EE7113' }}>
+                        <Text>
+                            Envoyer
                     </Text>
-                </Button>
-
+                    </Button>
+                </Container>
             </Container>
 
         )

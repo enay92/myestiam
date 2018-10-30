@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Cours from './components/agenda/Cours'
 import { LocaleConfig, Calendar, CalendarList, Agenda, calendarTheme, ActionSheet} from 'react-native-calendars'
 import { StatusBar, StyleSheet, Image, View, Platform } from 'react-native'
 import { Container, Header, Left, Button, Text, Body, Right, Footer, FooterTab,Icon } from 'native-base'
@@ -17,13 +18,13 @@ const {navigate}= this.props.navigation
       monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
       monthNamesShort: ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
       dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
-      dayNamesShort: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
+      dayNamesShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam']
     }
     LocaleConfig.defaultLocale = 'fr'
 
     if (Platform.OS == 'android')
 {
-    styles.head = {backgroundColor: '#837518',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
+    styles.head = {backgroundColor: '#292A86',paddingBottom:'20%', paddingTop:'8%', flex  : 1, flexDirection : 'row',justifyContent: 'space-between',}
     
 }
 
@@ -46,13 +47,6 @@ const {navigate}= this.props.navigation
 
         <Agenda
 
-          items={
-            {
-              '2018-08-16': [{ text: 'item 1 - any js object' }],
-              '2018-08-17': [{ text: 'item 2 - any js object' }],
-              '2018-08-24': [],
-              '2018-08-25': [{ text: 'item 3 - any js object' }, { text: 'any js object' }],
-            }}
           current={'2018-08-01'}
           minDate={'2016-09-01'}
           loadItemsForMonth={(month) => { console.log('trigger items loading', month) }}
@@ -63,8 +57,15 @@ const {navigate}= this.props.navigation
           onDayChange={(day) => { console.log('day changed', day) }}
           onMonthChange={(month) => { console.log('month changed', month) }}
           renderItem={(item, firstItemInDay) => {
-            return (<View >
-              <Text>solut</Text></View>)
+            return (
+
+            <View >
+              <Cours>
+                {item}
+                </Cours>
+              </View>
+              
+              )
           }}
           renderDay={(day, item) => { return (<View />) }}
           renderEmptyDate={() => { return (<View />) }}
@@ -92,9 +93,9 @@ const {navigate}= this.props.navigation
           refreshControl={null}
 
           markedDates={{
-            '2018-08-16': { selected: true, marked: true, selectedColor: '#837518' },
+            '2018-08-16': { marked: true },
             '2018-08-17': { marked: true },
-            '2018-08-18': { marked: true, dotColor: 'red', activeOpacity: 0 },
+            '2018-08-18': { marked: true },
             '2018-08-19': { disabled: true, disableTouchEvent: true }
           }}
 
@@ -125,10 +126,10 @@ const {navigate}= this.props.navigation
 const styles = StyleSheet.create({
   head: {
 
-    backgroundColor: '#837518',
+    backgroundColor: '#292A86',
   },
   foot: {
-    backgroundColor: '#837518',
+    backgroundColor: '#292A86',
   },
   hello: {
     color: 'white',

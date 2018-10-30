@@ -13,6 +13,7 @@ import Justification from './script/Justification';
 import Absence_justify from './script/AbsenceJustifier';
 import Absence_injustify from './script/AbsenceInjustifier';
 import O365Login from './script/connection/O365WebView';
+import Instagram from './script/Instagram';
 
 
 export default class App extends React.Component {
@@ -29,8 +30,8 @@ export default class App extends React.Component {
         require('./image/tour.jpeg'),
         require('./image/bigbrother.png'),
         require('./image/icon.png'),
-        require('./image/reminder.png')
-
+        require('./image/reminder.png'),
+        require('./image/siren.gif')
   
         ])
       await Expo.Font.loadAsync({
@@ -63,6 +64,7 @@ const AppStackNavigator = createStackNavigator({
   Login,
   O365Login,
   Home,
+  Instagram,
   Profil,
   Planning,
   Absence,

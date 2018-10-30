@@ -37,39 +37,39 @@ state ={
 
     const fluxs = [
       {
-        logo: <Thumbnail source={require('./../image/siren.png')} />,
+        logo: <Thumbnail source={require('./../image/siren.jpg')} />,
         name: "Absence",
         note: "Pensez à justifier vos absences",
         image: <Image source={require('./../image/run.gif')} style={{ height: 180, width: null, flex: 1 }} />,
-        note2: <Button rounded warning onPress={() => navigate('Absence')} style={{ marginRight: 20, width: 100 }}>
-          <Text style={{ includeFontPadding: false, color: 'white', paddingLeft: '16%' }}>JUSTIFIER</Text>
+        note2: <Button  style={styles.warning} onPress={() => navigate('Absence')}>
+          <Text style={{ includeFontPadding: false, color: 'yellow', paddingLeft: '16%' }}>JUSTIFIER</Text>
         </Button>,
       },
       {
-        logo: <Thumbnail source={require('./../image/ring-bell.png') } />,
+        logo: <Thumbnail source={require('./../image/newspaper.png') } />,
         name: "Estiam News",
         note: "Les étudiants de Master 1 ont participé à un hackathon organisé en collaboration avec le Grand Paris Express",
         image: <Image source={require('./../image/hackathon.jpg')} style={{ height: 150, width: null, flex: 1 }} />,
-        note2: <Button rounded info onPress={() => navigate('Plus')} style={{ marginRight: 30, width: 100, }} >
-          <Text style={{ includeFontPadding: false, color: 'white', paddingLeft: '16%' }}>Savoir plus</Text>
+        note2: <Button  style={styles.info} onPress={() => navigate('Instagram')} >
+          <Text style={{ includeFontPadding: false, color: 'black', paddingLeft: '16%' }}>Savoir plus</Text>
         </Button>,
       },
       {
-        logo: <Thumbnail source={ require('./../image/ring-bell.png') } />,
+        logo: <Thumbnail source={ require('./../image/newspaper.png') } />,
         name: "Estiam News",
         note: "l'école au 52ème étage de la Tour Montparnasse !! ça fait haut quand même",
         image: <Image source={require('./../image/tour.jpeg')} style={{ height: 130, width: null, flex: 1 }} />,
-        note2: <Button rounded info onPress={() => navigate('Plus')} style={{ marginRight: 30, width: 100, }}>
-          <Text style={{ includeFontPadding: false, color: 'white', paddingLeft: '16%' }}>Savoir plus</Text>
+        note2: <Button  style={styles.info} onPress={() => navigate('Instagram')}>
+          <Text style={{ includeFontPadding: false, color: 'black', paddingLeft: '16%' }}>Savoir plus</Text>
         </Button>,
       },
       {
-        logo: <Thumbnail source={ require( './../image/ring-bell.png') }/>,
+        logo: <Thumbnail source={ require( './../image/newspaper.png') }/>,
         name: "Estiam News",
         note: "Y'aurait-il des micros dans l'enceinte de l'école ?!",
         image: <Image source={require('./../image/bigbrother.png')} style={{ height: 150, width: null, flex: 1 }} />,
-        note2: <Button rounded info onPress={() => navigate('Plus')} style={{ marginRight: 30, width: 100, }} >
-          <Text style={{ includeFontPadding: false, color: 'white', paddingLeft: '16%' }}>Savoir plus</Text>
+        note2: <Button  style={styles.info} onPress={() => navigate('Instagram')} >
+          <Text style={{ includeFontPadding: false, color: 'black', paddingLeft: '16%' }}>Savoir plus</Text>
         </Button>,
       },
     ]
@@ -148,7 +148,7 @@ state ={
                 <Icon style={styles.hello} name="ios-home"  />
               </Button>
               <Button onPress={() => navigate('Note')}>
-                <Icon style={styles.hello} name="ios-paper"  />
+                <Icon style={styles.hello} name="ios-paper" />
               </Button>
               
               
@@ -192,6 +192,21 @@ headstyle :{
     textAlign: 'center',
     color: 'white'
 
+  },
+  hello2:{
+    backgroundColor: 'white',
+    alignItems:'center'
+
+  },
+  warning :{
+    backgroundColor :'#EE7113',
+    marginRight: 20,
+    width: 100
+  },
+  info :{
+    backgroundColor: '#8AD2FA',
+    marginRight: 30,
+     width: 100,
   },
 
   skill: {

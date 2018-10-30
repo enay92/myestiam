@@ -7,7 +7,7 @@ var infor = "info"
 let buttonstyle = { margin: '100%', fontFamily: 'Roboto_medium' }
 
 const HomeBlock = ({ logo, name, note, image, note2 }) => (
-  <Card>
+  <Card style={{marginBottom:-3, marginTop:-2}}>
     <CardItem>
       <Left>
         {logo}
