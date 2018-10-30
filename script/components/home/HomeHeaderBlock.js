@@ -26,6 +26,7 @@ if (Platform.OS == 'android') {
 if (Platform.OS == 'ios' & height == 812 & width == 812) {
 
     profilname = { textAlign: 'right', color: 'white' }
+    picstyle ={}
     headstyle = { backgroundColor: '#004080' }
     picstyle={}
     profiltitlename={color: '#8AD2FA'}
